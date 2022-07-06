@@ -6,7 +6,18 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:41:43 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/06 13:41:47 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/06 14:45:22 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int isalnum(int c)
+{
+    if ('A' <= c && c <= 'Z')
+		return (1);
+	else if ('a' <= c && c <= 'z')
+		return (1);
+    else if ('0' <= c && c <= '9')
+        return (1);
+	else
+		return (0);
+}
