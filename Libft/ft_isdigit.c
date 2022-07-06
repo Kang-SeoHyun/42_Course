@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 12:38:52 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/06 13:24:48 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/06 12:55:36 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/06 13:40:34 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int ft_isdigit(int c)
 {
-	if ('A' <= c && c <= 'Z')
-		return (1);
-	else if ('a' <= c && c <= 'z')
-		return (1);
-	else
-		return (0);
+    return ('0' <= c && c <= '9');
 }
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	printf("is alpha : %d",ft_isalpha('d'));
+	printf("is digit : %d",ft_isdigit('5'));
 }
 */
