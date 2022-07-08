@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 12:55:36 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/08 15:28:46 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/08 14:23:03 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/08 16:54:56 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+size_t ft_strlen(const char *s)
 {
-    return ('0' <= c && c <= '9');
-}
-/*
-#include <stdio.h>
+    size_t i;
 
-int	main(void)
-{
-	printf("is digit : %d",ft_isdigit('5'));
+    i = 0;
+    while(s[i])
+        i++;
+    return (i);
 }
-*/
+
+#include <stdio.h>
+int main(void)
+{
+    const char* name = "Block\0DMask";
+    printf("1. const char* name = \"BlockDMask\"");
+    printf("\tlen : %d\n", (int)strlen(name));
+}

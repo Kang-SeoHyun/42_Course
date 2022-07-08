@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 12:55:36 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/08 15:28:46 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/08 13:57:21 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/08 16:27:13 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isdigit(int c)
+int isprint(int c)
 {
-    return ('0' <= c && c <= '9');
+    return(32 <= c && c <= 126);
 }
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("is digit : %d",ft_isdigit('5'));
-}
-*/

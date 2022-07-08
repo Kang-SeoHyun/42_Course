@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 12:55:36 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/08 15:28:46 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/08 15:25:05 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/08 15:28:39 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-int ft_isdigit(int c)
-{
-    return ('0' <= c && c <= '9');
-}
-/*
-#include <stdio.h>
+#include <string.h>
 
-int	main(void)
-{
-	printf("is digit : %d",ft_isdigit('5'));
-}
-*/
+#endif
