@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 14:23:03 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/08 18:24:56 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/08 17:30:56 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/08 17:35:33 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void * ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+    
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-    const char* name = "Block\0DMask";
-    printf("1. const char* name = \"BlockDMask\"");
-    printf("\tlen : %d\n", (int)strlen(name));
-}
-*/

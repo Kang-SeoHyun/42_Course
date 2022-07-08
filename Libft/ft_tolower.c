@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 14:23:03 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/08 18:24:56 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/08 17:25:36 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/08 17:27:06 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int ft_tolower(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
+    if ('A' <= c && c <= 'Z')
+        return (c + 32);
+    else
+        return (c);
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-    const char* name = "Block\0DMask";
-    printf("1. const char* name = \"BlockDMask\"");
-    printf("\tlen : %d\n", (int)strlen(name));
-}
-*/
