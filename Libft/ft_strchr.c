@@ -6,26 +6,26 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:36:00 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/08 18:38:10 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/11 13:55:06 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(s =! '\0')
-    {
-        if (*s == c)
-            return (s);
-        s++;
-    }
-    return (s);
+	i = 0;
+	while (*s)
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	return (s);
 }
-
+/*
 #include <stdio.h>
 
 int main()
@@ -40,3 +40,4 @@ int main()
 
     return 0;
 }
+*/

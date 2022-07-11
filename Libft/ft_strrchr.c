@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:09:40 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/08 18:29:07 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/11 13:59:33 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 char	*ft_strrchr(const char	*s, int c)
 {
 	int			i;
-	const char	*here;
-
+	const char	*p;
 
 	i = 0;
-	while (s[i])
+	p = '\0';
+	while (*s)
 	{
-		if (s[i] == c)
-			here = &s[i];
+		if (*s == c)
+			p = s;
 		i++;
 	}
-	return (here);
+	return (p);
 }
-
+/*
 #include <stdio.h>
 
 int main()
@@ -40,3 +40,4 @@ int main()
 
     return 0;
 }
+*/
