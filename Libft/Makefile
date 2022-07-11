@@ -6,7 +6,7 @@
 #    By: seokang <seokang@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/11 15:27:07 by seokang           #+#    #+#              #
-#    Updated: 2022/07/11 16:02:51 by seokang          ###   ########.fr        #
+#    Updated: 2022/07/11 16:29:48 by seokang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,18 +20,32 @@ SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
 	   ft_strrchr.c
 OBJS = $(SRCS:.c=.o)
 
+
+ifdef BONUSFLAG
+	ALLOBJS 	= $(OBJS) $(OBJS_BONUS)
+else
+	ALLOBJS 	= $(OBJS)
+endif
+
 all: $(NAME)
 
-$(NAME) : $(OBJS)
-	ar -rc ${NAME} $(OBJS)
+$(NAME) : $(ALLOBJS)
+	ar rcs $(NAME) $(ALLOBJS)
 
 %.o: %.c
 	$(cc) $(CFLAGS) -c $< -o $@
 
+bonus:
+	make BONUSFLAG=1
+	
 clean:
 	rm -rf $(OBJS)
 
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean all
+re: 
+	$(make) fclean 
+	$(make) all
+
+.PHONY: all bonus clean fclean re
