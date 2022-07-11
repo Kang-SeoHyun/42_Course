@@ -6,13 +6,16 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 13:57:21 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/08 16:27:13 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/11 20:57:49 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int isprint(int c)
+int	ft_isprint(int c)
 {
-    return(32 <= c && c <= 126);
+	if (32 <= c && c <= 126)
+		return (1);
+	else
+		return (0);
 }

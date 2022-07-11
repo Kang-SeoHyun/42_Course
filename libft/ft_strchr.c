@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:36:00 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/11 13:55:06 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/11 21:23:48 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,27 +17,21 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (*s)
+	while (s[i])
 	{
-		if (*s == c)
-			return (s);
-		s++;
+		if (s[i] == c)
+			return ((char *)&s[i]);
+		i++;
 	}
-	return (s);
+	if (c == '\0')
+		return ((char *)&s[i]);
+	return (0);
 }
-/*
-#include <stdio.h>
 
-int main()
-{
-    char s1[30] = "A Garden Diary";  // 크기가 30인 char형 배열을 선언하고 문자열 할당
-
-    char *ptr = ft_strchr(s1, 'a');     // 'a'로 시작하는 문자열 검색, 포인터 반환
-
-        printf("%s\n", ptr);         // 검색된 문자열 출력
-          // 포인터에 1을 더하여 a 다음부터 검색
-    
-
-    return 0;
-}
-*/
+// #include<string.h>
+// #include<stdio.h>
+// int main()
+// {
+// 	printf("dd: %s\n", strchr("vvvvvvvvabc",'\0'));
+//     printf("dd: %s", ft_strchr("vvvvvvvvabc", '\0'));
+// }
