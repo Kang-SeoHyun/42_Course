@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:09:40 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/11 13:59:33 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/11 14:09:31 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strrchr(const char	*s, int c)
 	const char	*p;
 
 	i = 0;
-	p = '\0';
+	p = NULL;
 	while (*s)
 	{
 		if (*s == c)

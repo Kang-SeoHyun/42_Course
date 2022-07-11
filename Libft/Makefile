@@ -1,0 +1,37 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: seokang <seokang@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/07/11 15:27:07 by seokang           #+#    #+#              #
+#    Updated: 2022/07/11 16:02:51 by seokang          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+NAME = libft.a
+HEADER = libft.h
+
+SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+	   ft_isprint.c ft_strlen.c ft_toupper.c ft_tolower.c ft_strchr.c \
+	   ft_strrchr.c
+OBJS = $(SRCS:.c=.o)
+
+all: $(NAME)
+
+$(NAME) : $(OBJS)
+	ar -rc ${NAME} $(OBJS)
+
+%.o: %.c
+	$(cc) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -rf $(OBJS)
+
+fclean: clean
+	rm -rf $(NAME)
+
+re: fclean all
