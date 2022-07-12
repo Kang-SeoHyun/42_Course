@@ -66,7 +66,7 @@ man을 활용하여 라이브러리 제작하기.
 > > dstsize = dst_len + src_len + 1(NULL);
 
 ### ft_atoi
->
+> 문자열을 int형으로 대신 부호이상하면 안됨
 
 ## Chapter 3.2
 ### 
