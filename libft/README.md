@@ -18,6 +18,7 @@ man을 활용하여 라이브러리 제작하기.
 * [ft_strlcpy](#ftstrlcpy)
 * [ft_strlcat](#ftstrlcat)
 * [ft_atoi](#ftatoi)
+* [ft_memcmp](#ftmemcmp)
 
 ## Chapter 3.1
 
@@ -52,9 +53,15 @@ man을 활용하여 라이브러리 제작하기.
 > 뒤에서 char찾아서 출력
 
 -----------------------------------
+### ft_memcmp
+> s1, s2를 n까지 비교함
+
 ### ft_strnstr
 > 문자열에서 len길이만큼안에서 needle찾기
 
+### ft_memset
+> 메모리를 len 사이즈만큼 c로 초기화함.
+---------------------------------------
 ### ft_strncmp
 > n개만큼 문자열 두개 비교
 

@@ -24,7 +24,10 @@ SRCS = 	ft_isalpha.c \
 	   	ft_toupper.c \
 	   	ft_tolower.c \
 	   	ft_strchr.c \
-	   	ft_strrchr.c
+	   	ft_strrchr.c \
+		ft_memset.c \
+		ft_memcmp.c \
+		ft_strnstr.c
 OBJS = $(SRCS:.c=.o)
 
 ifdef BONUSFLAG
