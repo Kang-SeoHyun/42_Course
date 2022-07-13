@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:09:40 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/11 21:53:20 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/13 12:27:18 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char	*ft_strrchr(const char	*s, int c)
 	return (0);
 }
 
+/*
 #include<string.h>
 #include<stdio.h>
 int main()
@@ -38,3 +39,4 @@ int main()
 	printf("dd: %s\n", strrchr("\0", 'a'));
     printf("dd: %s", ft_strrchr("\0", 'a'));
 }
+*/
