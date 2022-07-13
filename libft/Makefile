@@ -6,7 +6,7 @@
 #    By: seokang <seokang@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/11 15:27:07 by seokang           #+#    #+#              #
-#    Updated: 2022/07/11 20:33:04 by seokang          ###   ########.fr        #
+#    Updated: 2022/07/13 16:10:07 by seokang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,9 @@ SRCS = 	ft_isalpha.c \
 	   	ft_strrchr.c \
 		ft_memset.c \
 		ft_memcmp.c \
-		ft_strnstr.c
+		ft_strncmp.c \
+		ft_strnstr.c \
+		ft_bzero.c 
 OBJS = $(SRCS:.c=.o)
 
 ifdef BONUSFLAG
