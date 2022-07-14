@@ -6,29 +6,34 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:49:28 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/13 19:46:06 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/14 17:38:34 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//뭐가 큰지 생각해서 코딩하기!
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*d;
-	const unsigned char	*s;
+	unsigned char		*s;
 	size_t				i;
 
 	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
-	i = len;
-	if (!src && !dst)
-		return (0);
-	if (dst == src)
+	s = (unsigned char *)src;
+	i = 0;
+	if (src == dst)
 		return (dst);
-	while (len > 0)
+	if (!dst && !src)
+		return (0);
+	if (dst < src)
 	{
-		d[len] = s[len];
-		len--;
+		while (i++ < len)
+			d[i] = s[i];
+	}
+	else
+	{
+		while (i < len--)
+			d[len] = s[len];
 	}
 	return (dst);
 }

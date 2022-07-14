@@ -6,25 +6,23 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:43:45 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/13 19:38:07 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/14 16:28:55 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char		*d;
-	const unsigned char	*s;
+	unsigned char		*s;
 	size_t				i;
 
 	d = (unsigned char *)dst;
-	s = (const unsigned char *)src;
+	s = (unsigned char *)src;
 	i = 0;
-	if (!src && !dst)
+	if (!dst && !src)
 		return (0);
-	if (dst == src)
-		return (dst);
 	while (i < n)
 	{
 		d[i] = s[i];
