@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:25:05 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/13 18:56:06 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/14 18:26:46 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,12 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 void		ft_bzero(void *s, size_t n);
 
-void		*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void		*ft_memcpy(void *dst, const void *src, size_t n);
 void		*ft_memmove(void *dst, const void *src, size_t len);
 void		*ft_memchr(const void *s, int c, size_t n);
+
+size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
+int			ft_atoi(const char *str);
 
 #endif
