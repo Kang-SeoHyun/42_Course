@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:25:05 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/19 16:10:59 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/19 20:34:27 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
@@ -41,5 +42,9 @@ int			ft_atoi(const char *str);
 
 void		*ft_calloc(size_t count, size_t size);
 char		*ft_strdup(const char *s1);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
 
 #endif
