@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 18:09:40 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/19 15:57:07 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/19 16:01:19 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/19 17:36:33 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char	*s, int c)
+void	ft_strcpy(char *dst, const char *s1)
 {
-	int			i;
+	int	i;
 
 	i = 0;
-	while (s[i])
-		i++;
-	if (c == '\0')
-		return ((char *)&s[i]);
-	i = i - 1;
-	while (i >= 0)
+	while (s1[i])
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
+		dst[i] = s1[i];
+		i++;
 	}
-	return (0);
+	dst[i] = '\0';
 }
 
-/*
-#include<string.h>
-#include<stdio.h>
-int main()
+char	*ft_strdup(const char *s1)
 {
-	printf("dd: %s\n", strrchr("\0", 'a'));
-    printf("dd: %s", ft_strrchr("\0", 'a'));
+	char	*dst;
+	size_t	s_len;
+
+	s_len = ft_strlen(s1);
+	dst = malloc(sizeof(char) * (s_len + 1));
+	if (!dst)
+		return (0);
+	ft_strcpy(dst, s1);
+	return (dst);
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 15:25:05 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/14 18:26:46 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/19 16:10:59 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,8 @@ void		*ft_memchr(const void *s, int c, size_t n);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t		ft_strlcat(char *dst, const char *src, size_t dstsize);
 int			ft_atoi(const char *str);
+
+void		*ft_calloc(size_t count, size_t size);
+char		*ft_strdup(const char *s1);
 
 #endif

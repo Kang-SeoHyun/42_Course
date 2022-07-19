@@ -1,42 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/08 18:09:40 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/19 15:57:07 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/19 16:01:07 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/19 16:33:21 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char	*s, int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	int			i;
+	void	*ptr;
 
-	i = 0;
-	while (s[i])
-		i++;
-	if (c == '\0')
-		return ((char *)&s[i]);
-	i = i - 1;
-	while (i >= 0)
-	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
-	}
-	return (0);
+	ptr = malloc (count * size);
+	if (!ptr)
+		return (0);
+	ft_memset(ptr, 0, count * size);
+	return (ptr);
 }
-
-/*
-#include<string.h>
-#include<stdio.h>
-int main()
-{
-	printf("dd: %s\n", strrchr("\0", 'a'));
-    printf("dd: %s", ft_strrchr("\0", 'a'));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:49:28 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/14 18:56:35 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/19 17:16:03 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,14 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (0);
 	if (dst < src)
 	{
-		while (i++ < len)
+		while (i < len)
+		{
 			d[i] = s[i];
+			i++;
+		}
 	}
 	else
-	{
 		while (i < len--)
 			d[len] = s[len];
-	}
 	return (dst);
 }
