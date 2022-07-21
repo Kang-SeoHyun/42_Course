@@ -6,11 +6,11 @@
 #    By: seokang <seokang@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/11 15:27:07 by seokang           #+#    #+#              #
-#    Updated: 2022/07/19 21:58:38 by seokang          ###   ########.fr        #
+#    Updated: 2022/07/21 14:17:49 by seokang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 HEADER = libft.h
@@ -45,22 +45,34 @@ SRCS = 	ft_isalpha.c \
 		ft_substr.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
-		ft_split.c \
-		ft_itoa.c \
 		ft_strmapi.c \
-		ft_striteri.c 
-OBJS = $(SRCS:.c=.o)
+		ft_striteri.c \
+		#ft_split.c \
+		ft_itoa.c
+
+BONUS =	ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c \
+			
+SRCS_OBJS = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS:.c=.o)
 
 ifdef BONUSFLAG
-	ALLOBJS 	= $(OBJS) $(OBJS_BONUS)
+	ALLOBJS 	= $(SRCS_OBJS) $(BONUS_OBJS)
 else
-	ALLOBJS 	= $(OBJS)
+	ALLOBJS 	= $(SRCS_OBJS)
 endif
 
 all: $(NAME)
 
-$(NAME) : $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+$(NAME) : $(ALLOBJS)
+	ar rcs $(NAME) $(ALLOBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
@@ -69,11 +81,13 @@ bonus:
 	make BONUSFLAG=1
 	
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(SRCS_OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean all
+re:
+		make fclean
+		make all
 
 .PHONY: all bonus clean fclean re
