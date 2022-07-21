@@ -6,7 +6,7 @@
 #    By: seokang <seokang@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/11 15:27:07 by seokang           #+#    #+#              #
-#    Updated: 2022/07/21 14:17:49 by seokang          ###   ########.fr        #
+#    Updated: 2022/07/21 17:07:53 by seokang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,6 +63,7 @@ BONUS =	ft_lstnew.c \
 SRCS_OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS:.c=.o)
 
+
 ifdef BONUSFLAG
 	ALLOBJS 	= $(SRCS_OBJS) $(BONUS_OBJS)
 else
@@ -71,15 +72,15 @@ endif
 
 all: $(NAME)
 
+bonus:
+	make BONUSFLAG=1 
+	
 $(NAME) : $(ALLOBJS)
 	ar rcs $(NAME) $(ALLOBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADER)
 
-bonus:
-	make BONUSFLAG=1
-	
 clean:
 	rm -rf $(SRCS_OBJS) $(BONUS_OBJS)
 

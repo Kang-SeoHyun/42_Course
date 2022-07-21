@@ -1,15 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 12:49:29 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/21 12:49:31 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/21 14:23:55 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/21 15:03:11 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+t_list	*ft_lstlast(t_list *lst)
+{
+	while (lst->next) //이거 생각
+		lst = lst->next;
+	return (lst);
+}

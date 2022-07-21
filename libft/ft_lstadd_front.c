@@ -1,15 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/21 12:49:29 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/21 12:49:31 by seokang          ###   ########.fr       */
+/*   Created: 2022/07/21 14:24:27 by seokang           #+#    #+#             */
+/*   Updated: 2022/07/21 14:53:24 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!lst)
+	{
+		lst = &new;
+		return ;
+	}
+	if (!new)
+		return ;
+	new->next = *lst;
+	lst = &new; //이거 물어보기
+}
