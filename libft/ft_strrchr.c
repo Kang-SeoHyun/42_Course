@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 18:09:40 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/19 15:57:07 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/22 17:33:54 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strrchr(const char	*s, int c)
 	i = i - 1;
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
 		i--;
 	}
@@ -36,7 +36,7 @@ char	*ft_strrchr(const char	*s, int c)
 #include<stdio.h>
 int main()
 {
-	printf("dd: %s\n", strrchr("\0", 'a'));
-    printf("dd: %s", ft_strrchr("\0", 'a'));
+	printf("dd: %s\n", strrchr("dfa11dfdfa22", '\0'));
+    printf("dd: %s", ft_strrchr("dfa11dfdfa22", '\0'));
 }
 */

@@ -6,7 +6,7 @@
 #    By: seokang <seokang@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/11 15:27:07 by seokang           #+#    #+#              #
-#    Updated: 2022/07/22 15:05:31 by seokang          ###   ########.fr        #
+#    Updated: 2022/07/22 17:32:09 by seokang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,8 +47,8 @@ SRCS = 	ft_isalpha.c \
 		ft_strtrim.c \
 		ft_strmapi.c \
 		ft_striteri.c \
-		#ft_split.c \
-		ft_itoa.c
+		ft_itoa.c \
+		ft_split.c 
 
 BONUS =	ft_lstnew.c \
 		ft_lstadd_front.c \
@@ -71,7 +71,6 @@ else
 endif
 
 all: $(NAME)
-	sleep 1
 
 bonus:
 	make BONUSFLAG=1 

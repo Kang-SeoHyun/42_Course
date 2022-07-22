@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 20:27:24 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/21 12:49:41 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/22 16:52:32 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,23 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (fd < 0)
-		return ;
-	if (n == -2147483648)
-		write(fd, "-2147483648", 11);
-	else if (n < 0)
+	long long	num;
+	char		c;
+
+	num = n;
+	if (num < 0)
 	{
 		write(fd, "-", 1);
-		n *= -1;
+		num *= -1;
 	}
+	if (num > 9)
+	{
+		ft_putnbr_fd(num / 10, fd);
+		ft_putnbr_fd(num % 10, fd);
+	}	
 	else
 	{
-		if (n >= 10)
-		{
-			ft_putnbr_fd((n / 10), fd);
-			ft_putnbr_fd((n % 10), fd);
-		}
-		else if (n < 10)
-		{
-			n = n + '0';
-			write(fd, &n, 1);
-		}
+		c = num + '0';
+		write(fd, &c, 1);
 	}
 }
