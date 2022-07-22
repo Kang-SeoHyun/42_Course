@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 14:24:20 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/21 16:18:54 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/22 15:17:13 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
-	while (lst)
+	while (*lst)
 	{
 		temp = *lst;
 		*lst = (*lst)->next;

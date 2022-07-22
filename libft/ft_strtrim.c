@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 12:48:52 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/21 13:06:13 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/22 15:23:37 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (start < end && ft_strchr(set, s1[start]))
 		start++;
-	while (start < end && ft_strchr(set, s1[end - 1])) //0<end는 가득찬거 들어왔을때 오류
+	while (start < end && ft_strchr(set, s1[end - 1]))
 		end--;
 	new_str = (char *)malloc(end - start + 1);
 	if (!new_str)

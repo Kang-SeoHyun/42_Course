@@ -6,7 +6,7 @@
 #    By: seokang <seokang@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/11 15:27:07 by seokang           #+#    #+#              #
-#    Updated: 2022/07/21 17:07:53 by seokang          ###   ########.fr        #
+#    Updated: 2022/07/22 15:05:31 by seokang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,6 +71,7 @@ else
 endif
 
 all: $(NAME)
+	sleep 1
 
 bonus:
 	make BONUSFLAG=1 

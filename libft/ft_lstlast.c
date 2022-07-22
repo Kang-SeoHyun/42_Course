@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 14:23:55 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/21 15:03:11 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/22 15:09:33 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next) //이거 생각
+	if (!lst)
+		return (0);
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }

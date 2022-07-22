@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 14:24:27 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/21 14:53:24 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/22 15:07:20 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst)
 	{
-		lst = &new;
+		*lst = new;
 		return ;
 	}
 	if (!new)
 		return ;
 	new->next = *lst;
-	lst = &new; //이거 물어보기
+	*lst = new;
 }
