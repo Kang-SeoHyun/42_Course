@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:36:00 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/22 16:56:37 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/25 15:36:37 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
-
-// #include<string.h>
-// #include<stdio.h>
-// int main()
-// {
-// 	printf("dd: %s\n", strchr("vvvvvvvvabc",'\0'));
-//     printf("dd: %s", ft_strchr("vvvvvvvvabc", '\0'));
-// }

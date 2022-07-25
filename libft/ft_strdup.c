@@ -6,13 +6,13 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 16:01:19 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/19 17:36:33 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/25 15:36:29 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strcpy(char *dst, const char *s1)
+static void	ft_strcpy(char *dst, const char *s1)
 {
 	int	i;
 

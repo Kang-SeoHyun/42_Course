@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 12:25:55 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/14 16:27:29 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/25 15:31:11 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,40 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <string.h>
-#include <stdio.h>
-#define MAX_NAMELEN 20
-
-typedef struct 
-{
-	char	name[MAX_NAMELEN];
-	int		age;
-}Member;
-
-int	main(void)
-{
-	Member	m1={NULL,NULL};
-	Member	m2={"강감찬",27};
-	Member	m3={NULL,NULL};
-
-	if (ft_memcmp(&m1,&m2,sizeof(Member)) == 0)
-	{
-		printf("m1과 m2는 서로 같습니다.\n");
-	}
-	else
-	{
-		printf("m1과 m2는 서로 다릅니다.\n");
-	}
-	if (ft_memcmp(&m1,&m3,sizeof(Member)) == 0) 
-	{
-		printf("m1과 m3는 서로 같습니다.\n");
-	}
-	else
-	{
-		printf("m1과 m3는 서로 다릅니다.\n");
-	}
-	return (0);
-}
-*/

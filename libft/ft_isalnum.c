@@ -6,11 +6,9 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/06 13:41:43 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/11 20:57:40 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/25 14:00:05 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalnum(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: seokang <seokang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 15:32:57 by seokang           #+#    #+#             */
-/*   Updated: 2022/07/19 15:57:01 by seokang          ###   ########.fr       */
+/*   Updated: 2022/07/25 15:34:38 by seokang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-//     char s1[10] = "kajfaagjjkl";
-//     char s2[10] = "aab";
-//     int compare1 = strncmp(s1, s2, 2);
-//     int compare2 = ft_strncmp(s1, s2, 2);
-// 	printf("원 함수결과 : %d\n",compare1); 
-// 	printf("ft 함수결과 : %d\n",compare2);
-//     return (0);
-// }
